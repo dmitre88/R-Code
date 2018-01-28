@@ -18,11 +18,20 @@
 # An homicide is a death classify with the code X85 to Y09 under the International#
 # Classification of Diseases 10th revision (ICD-10).                              #
 #=================================================================================#
-
 #homicide.rate(INEGI, CONAPO, year)
 #INEGI: dataframe of the mortality data (DEFUN.dbf) retrieved from INEGI.
 #CONAPO: dataframe of the municipality population data (baseprymunMX.csv) retrieved from CONAPO.
 #integer value={2010, 2011, 2012, ...}
+#output: a data frame with the following variables:
+#cve: code of the municipality
+#mun: name of the municipality
+#state: code of the state
+#state2: name of the state 
+#year: year of the data
+#homicides: homicides per municipality
+#pob: population per municipality
+#rate: homicide rate per municipality
+
 
 #Function to estimate homicide rate
 homicide.rate<-function(INEGI, CONAPO, year){
