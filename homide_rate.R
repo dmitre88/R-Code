@@ -8,8 +8,8 @@
 #       sum due to those with unspecified municipality. The "homicide.rate"       #
 #       function can be applied from 2010 onwards.                                #
 # Data sources that can be used with this function                                #
-# http://www.beta.inegi.org.mx/proyectos/registros/vitales/mortalidad/            #
-# http://catalogo.datos.gob.mx/dataset/proyecciones-de-la-poblacion-de-mexico     #
+# http://en.www.inegi.org.mx/proyectos/registros/vitales/mortalidad/              #
+# http://catalogo.datos.gob.mx/en/dataset/proyecciones-de-la-poblacion-de-mexico  #
 #=================================================================================#
 # Indicator formula                                                               #
 # Rate=(A/B)*100,000, where                                                       #
