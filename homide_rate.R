@@ -70,7 +70,7 @@ homicide.rate<-function(INEGI, CONAPO, year){
   HOM$rate<-(HOM$homicides/HOM$pob)*100000
   
   #Format and create state and year variables
-  HOM$state<-ifelse(HOM$cve>10000, substr(HOM$cve,1,2), substr(HOM$cve,1,1))
+  HOM$state<-as.numeric(ifelse(HOM$cve>10000, substr(HOM$cve,1,2), substr(HOM$cve,1,1)))
   HOM$year<-year
   HOM$state2<-HOM$state
   HOM$state2[HOM$state2==	0	]<-	'National'
