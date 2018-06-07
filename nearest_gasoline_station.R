@@ -33,7 +33,7 @@ nearest_gasoline_station<-function(data1, e=0.02, begin_row=1, final_row=800, co
     #Extract the i-ID data
     station_i<-as.numeric((data1[i,c("id", "lon", "lat")]))
     
-    #Subset that is within a e-distance. It is not included the station_id. They are only keep the id, lon, and lat variables.
+    #Subset that is within an e-distance. It is not included the station_id. They are only keep the id, lon, and lat variables.
     data_subset<-data1[data1$lon>(station_i[2]-e) & data1$lon<(station_i[2]+e) & 
                          data1$lat>(station_i[3]-e) & data1$lat<(station_i[3]+e), c("id", "lon", "lat")]
     data_subset<-data_subset[!data_subset$id%in%station_i[1],]
