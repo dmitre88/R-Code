@@ -38,7 +38,7 @@ nearest_gasoline_station<-function(data1, e=0.02, begin_row=1, final_row=800, co
                          data1$lat>(station_i[3]-e) & data1$lat<(station_i[3]+e), c("id", "lon", "lat")]
     data_subset<-data_subset[!data_subset$id%in%station_i[1],]
     
-    #If there is no other station near, capture NA and continue to the next iteration, else continue.
+    #If there are no other station near, capture NA and continue to the next iteration, else continue.
     if(nrow(data_subset)==0) { data1[i,c("minutes", "km", "euclidean_dist", "nearest_id")]<-NA }
     if(nrow(data_subset)==0) { next }
     
@@ -70,14 +70,13 @@ nearest_gasoline_station<-function(data1, e=0.02, begin_row=1, final_row=800, co
         )
       ) 
       
-      
       #To keep count of the API requests
       route_counter=route_counter+1
       
       data_subset[j,"minutes"]<-route_df[[1]]/60 #the output is in minutes
       data_subset[j,"km"]<-route_df[[2]]/1000 #the output is in meters
       #break the loop if the driving time increases as the eucledian distance increases (it has to increased n-times)
-      if (j==1) {next} #only can compare the distance from the 2nd observation onwards
+      if (j==1) {next} #only compares the distance from the 2nd observation onwards
       if ( (data_subset[j,"minutes"]-data_subset[j-1,"minutes"])>0 ) {counter=counter+1} #if it is farther, +=1 to counter
       if (counter==count) {break}
     }
