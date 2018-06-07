@@ -13,7 +13,7 @@
 #' @param count A value used to perform the gmapsdistance function over "n" stations until it finds the shortest one.
 #' @param api The API key provided by Google Maps.
 #'
-#' @return The function returns the data frame used as input, with the following new variables. minutes (driving time in minutes),
+#' @return The function returns the data frame used as input, with the following new variables: minutes (driving time in minutes),
 #' km (driving distance in kilometers), euclidean_dist (coordinate distance), nearest_id (nearest retailer identifier).
 nearest_gasoline_station<-function(data1, e=0.02, begin_row=1, final_row=800, count=2, api=""){
   
