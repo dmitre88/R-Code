@@ -1,9 +1,9 @@
 #' Estimate the driving time to the nearest gasoline station
 #'
-#' Identify the nearest gasoline station based on the driving time. It uses the route gmapsdistance library, which uses the 
-#' Google Maps API. As Google restricts the number of requests per day, the function performs the gmapsdistance for the selected
-#' rows (begin row until the final row). Note: if the function displays an error, it has to be used the gmapdistance library from
-#' github, not from the CRAN. (see https://github.com/rodazuero/gmapsdistance/issues/17)
+#' It uses the route gmapsdistance library, which uses the Google Maps API. As Google restricts the number of requests 
+#' per day, the function performs the gmapsdistance for the selected rows (begin row until the final row).
+#' Note: if the function displays an error, it has to be used the gmapdistance library from github, not from the CRAN.
+#' (see https://github.com/rodazuero/gmapsdistance/issues/17 and 
 #' devtools::install_github("rodazuero/gmapsdistance@058009e8d77ca51d8c7dbc6b0e3b622fb7f489a2")
 #' 
 #' @param data1 A data frame with the variables latitude (lat), longitude (lon), and retailers identifier (id).
