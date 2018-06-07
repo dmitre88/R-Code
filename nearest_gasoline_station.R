@@ -1,4 +1,4 @@
-#' Estimate the drivint time to the nearest gasoline station
+#' Estimate the driving time to the nearest gasoline station
 #'
 #' Identify the nearest gasoline station based on the driving time. It uses the route gmapsdistance library, which uses the 
 #' Google Maps API. As Google restricts the number of requests per day, the function performs the gmapsdistance for the selected
