@@ -37,7 +37,7 @@
 homicide.rate<-function(INEGI, CONAPO, year){
 
   #Packages needed to run
-  packages<-c("foreign", "plyr", "stringr", "dplyr")
+  packages<-c("plyr")
   if (length(setdiff(packages, rownames(installed.packages()))) > 0) {
   install.packages(setdiff(packages, rownames(installed.packages())))
   }
